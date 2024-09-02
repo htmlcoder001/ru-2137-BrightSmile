@@ -23,6 +23,12 @@ body {
   
   cursor: pointer;
   
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  
 }
 .theme-button:before {
   content: '';
@@ -35,6 +41,11 @@ body {
   width: 100%;
   left: 48px;
   height: 100%;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 .theme-button:after {
   content: '';
@@ -47,6 +58,11 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 .theme-button__text {
   font-family: 'Montserrat', sans-serif;
@@ -61,6 +77,16 @@ body {
   position: relative;
   z-index: 2;
   max-width: 475px;
+}
+.theme-button:hover {
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  transform: translateY(6px);
+}
+.theme-button:hover:before {
+  top: 20px;
 }
 
 .theme-headline {
@@ -202,6 +228,7 @@ body {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 6px;
   text-align: left;
   display: block;
   color: #FFFFFF;
@@ -713,8 +740,9 @@ body {
   justify-content: space-between;
   gap: 80px;
   margin-top: 20px;
+  position: relative;
 }
-.word-steps__item {
+.work-steps__item {
   padding: 32px 16px;
   background: #F6F6F6;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -728,6 +756,29 @@ body {
   line-height: 24px;
   
   color: #000000;
+  
+  
+}
+.work-wrapper__steps:after {
+  content: '';
+  display: block;
+  position: absolute;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/how-arrows.png);
+  
+  width: 90px;
+  height: 63px;
+  
+  left: 50%;
+  top: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* Expert */
@@ -761,10 +812,27 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 32px;
-  padding: 50px 42px;
+  padding: 50px 62px 50px 42px;
   display: flex;
   align-items: center;
   gap: 42px;
+  position: relative;
+}
+.expert-wrapper__main:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  
+  background-image: url(../img/expert-quote.png);
 }
 .expert-main__avatar {
   width: 212px;
@@ -773,7 +841,7 @@ body {
 .expert-main__content {
 }
 .expert-content__head {
-  
+  max-width: 505px;
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-weight: 700;
