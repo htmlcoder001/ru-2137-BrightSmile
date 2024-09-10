@@ -3,7 +3,10 @@
   .intro-wrapper,
   .faq-wrapper,
   .cta-wrapper,
-  .text-wrapper {
+  .text-wrapper,
+  .about-wrapper,
+  .features-wrapper,
+  .work-wrapper {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -74,11 +77,18 @@
   .cta-form__input {
     flex: 1 0 30%;
   }
+  
+  .about-content__img {
+    max-width: 380px;
+  }
 }
 
 @media (max-width: 960px) {
   .text-wrapper__content {
     max-width: 430px;
+  }
+  .about-content__img {
+    max-width: 300px;
   }
 }
 
@@ -128,6 +138,12 @@
   .text-wrapper__content {
     max-width: 100%;
   }
+  .about-content__img {
+    max-width: 420px;
+  }
+  .about-wrapper__content {
+    flex-direction: column;
+  }
 }
 
 /* Mobile */
@@ -158,19 +174,94 @@
   .text-wrapper {
     padding-top: 24px;
   }
+  
+  .intro-wrapper__title {
+    max-width: 285px;
+    margin-bottom: 16px;
+  }
+  .intro-wrapper__title,
+  .intro-wrapper__title > span {
+    font-size: 29px;
+    line-height: 36px;
+  }
+  .intro-wrapper {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+  .section-intro {
+    background-image: url(../img/intro-banner_mobile.jpg);
+    background-position: right;
+  }
+  .intro-wrapper__text {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 280px;
+    padding: 0;
+  }
+  .theme-button__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .intro-wrapper__button {
+    max-width: 370px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 40px;
+  }
+  .reviews-box__item {
+    width: 200px;
+    height: 200px;
+  }
+  .reviews-wrapper__box {
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 32px 16px;
+  }
+  .logo-shine:before {
+    width: 55px;
+    height: 55px;
+    left: -25px;
+    top: -18px;
+  }
+  .reviews-info__general {
+    font-size: 16px;
+  }
+  .reviews-info__rating {
+    margin-top: 12px;
+  }
+  
+  
+  .section-why {
+    display: none;
+  }
+  
+  
 }
 
 @media (max-width: 475px) {
   .intro-wrapper,
   .faq-wrapper,
   .cta-wrapper,
-  .text-wrapper {
+  .text-wrapper,
+  .about-wrapper,
+  .features-wrapper {
     padding-left: 12px;
     padding-right: 12px;
   }
   
+  .reviews-box__item {
+    width: 250px;
+    height: 250px;
+  }
+  .reviews-wrapper__box {
+    grid-template-columns: 250px;
+    grid-gap: 24px 12px;
+  }
 }
 
 @media (max-width: 375px) {
-
+  .intro-wrapper__button {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
